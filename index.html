@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>WebRTC QR Chat</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- QR libraries -->
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+<body>
+
+<div class="app">
+  <header>WebRTC Chat — QR Signaling</header>
+
+  <div class="video-area">
+    <video id="localVideo" autoplay muted playsinline></video>
+    <video id="remoteVideo" autoplay playsinline></video>
+  </div>
+
+  <div class="controls">
+    <button onclick="startMedia()">Start Camera</button>
+    <button onclick="createOffer()">Create Offer (QR)</button>
+    <button onclick="createAnswer()">Create Answer (QR)</button>
+    <button onclick="scanQR()">Scan QR</button>
+  </div>
+
+  <div id="qrBox"></div>
+  <div id="qrScanner"></div>
+
+  <section class="chat">
+    <div id="messages"></div>
+    <input id="msgInput" placeholder="Type message">
+    <button onclick="sendMessage()">Send</button>
+    <input type="file" onchange="sendFile(this)">
+  </section>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

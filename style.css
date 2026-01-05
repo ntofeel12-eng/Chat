@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  background: #0b141a;
+  color: #fff;
+  font-family: system-ui;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  padding: 12px;
+  background: #202c33;
+  text-align: center;
+  font-weight: bold;
+}
+
+.video-area {
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+}
+
+video {
+  width: 50%;
+  background: black;
+  border-radius: 10px;
+}
+
+.controls {
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+}
+
+button {
+  background: #005c4b;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+#qrBox {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+#qrScanner {
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+}
+
+.chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+}
+
+#messages {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.msg {
+  background: #005c4b;
+  padding: 6px;
+  margin: 4px;
+  border-radius: 6px;
+  max-width: 70%;
+}
+
+input {
+  padding: 8px;
+  background: #202c33;
+  color: white;
+  border: none;
+  margin-top: 4px;
+}
